@@ -1,6 +1,8 @@
 package com.xq.cloud.controller;
 
 import com.xq.cloud.service.HelloService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/test")
 public class TestController {
+    Logger logger= LoggerFactory.getLogger(getClass());
+
     @Autowired
     private HelloService helloService;
 
